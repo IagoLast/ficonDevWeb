@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+ 
+<html lang="en">
+ 
+<head> 
+    <!-- Meta Tags -->
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Title -->
+    <title>Gulli webPage</title> 
+    <!-- Stylesheets -->    
+    <link rel="stylesheet" href="css/normalice.css" media="screen"> 
+    <link rel="stylesheet" href="css/main.css" media="screen">    
+    <link rel="stylesheet" href="css/admin.css" media="screen">    
+    <link rel="stylesheet" href="css/images.css" media="screen">  
+    <meta charset="utf-8" />
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css" />
+	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+	<script>
+	  $(function() {
+	    $( "#datepicker" ).datepicker();
+	  });
+  </script>
+
+</head>
+<body>
+<div class='headNav'>
+    <nav >
+        <ul>
+        <li class='Home-link'>      <a href="/">Home</a></li>
+        <li class='menu-link'>      <a href="#">Menu</a></li>
+        <li class='dishes-link'>    <a href="#">Dishes</a></li>
+        <li class='Food-link'>      <a href="#">Food</a></li>
+        </ul>
+    </nav> 
+</div>
+<div class='leftNav'>
+    <div class ='basic_data'>
+        <img src="/src/imagesages/gulli.png" alt="some_text" class='image-avatar'>
+        <p>"The best food that you can afford."
+        </p>
+    </div>
+    <nav>
+        <ul>
+        <li class='Home-link'>      <a href="/">Home</a></li>
+        <li class='menu-link'>      <a href="#">Menu</a></li>
+        <li class='dishes-link'>    <a href="#">Dishes</a></li>
+        <li class='Food-link'>      <a href="#">See our food</a></li>
+        </ul>
+    </nav> 
+</div>
+
+    <div class="background-img">
+        <div class="content-wrapper">
+        	<div id="content">
+	        	<div class='reservations-wrapper'>
+	        		<form  class="shadowed" action="/reservations" method="post" enctype="multipart/form-data">
+				        <input type="text" name="name" placeholder='Name ' >                 
+				        <p><input type="text" id="datepicker" name="date" placeholder="Date"/></p>
+				        <input type="number" name="number" min="1" max="20" placeholder="Reserved places"><br>			        
+				        <button class='btn-reserve' type="submit" value="Reserve!">Reserve</button>
+				    </form>
+	  			</div>
+	  		</div>		
+        </div>         
+    </div>
+</body>
+
+<script src="js/main.js"></script>
+</html>
+
+

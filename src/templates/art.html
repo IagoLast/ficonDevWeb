@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+ 
+<html lang="en">
+ 
+<head> 
+    <!-- Meta Tags -->
+    <meta charset="utf-8"> 
+    <link rel="stylesheet" href="css/art.css" media="screen"> 
+</head>
+    <div class='internal_content'> 
+        {% for draw in draws -%}            
+            <img  class='draw_img' src= {{ draw.url }} alt='img not found'>
+            <div class='draw_footer'>
+            <p> {{ draw.text }}</p>  
+            <hr> 
+            </div>           
+        {%- endfor %}
+    </div>
+<body>
+    
+ 
+</body>
+</html>

@@ -1,0 +1,14 @@
+
+{%for dish in dishes %}
+<div class='dishes-wrapper shadowed'>
+	<h3 style="padding-left: 20px;">{{ dish.name }}</h3>
+	<p  style= "padding-left:20px;">{{ dish.price }} €</p>
+	<div class="dishes-list-image-wrapper" style="padding-left:20%;" > 
+        <a href="#"><img  src={{ dish.url }}    alt = {{ dish.name }}    class='draw-img'></a>
+        <p>{{ dish.description }}</p>
+    </div>	
+	
+
+</div>
+{%- endfor %}	
+<script src="js/main.js"></script>

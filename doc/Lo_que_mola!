@@ -1,0 +1,11 @@
+Fijate que el diseño esta centrado en ser compatible con toda clase de dispositivos y tamaño de pantalla,
+siendo el responsive design nuestra principal meta.
+
+Como los dispositivos moviles procesan mas lento, se eliminan las imagenes pesadas en sus vistas.
+
+Tened en cuenta que la aplicacion ya funciona! y tiene backend incluido.
+
+Junto a la web hacia clientes, se incluye la web de administracion, que permite a los dueños del restaurante
+añadir nuevos platos a la lista, y editar los menus.
+
+Ademas los usuarios "Vip", dados de alta por el restaurante, pueden realizar reservas.

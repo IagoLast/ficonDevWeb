@@ -1,0 +1,29 @@
+<div class='submit_wrapper'>
+  <div class="half">
+    <form id='submit_draw' action="/admin/addUser" method="post" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder='Name' > <br>
+        <input type="text" name="price"  placeholder='Price'><br>                    
+        <input type="text" name="image"  placeholder='image'><br>
+        <select name="dishType">
+          <option value="Meat">Meat</option>
+          <option value="Fish">Fish</option>
+          <option value="Dessert">Dessert</option>
+          <option value="Appetizer">Appetizer</option>
+        </select><br><br>
+        <textarea name="description" placeholder='Description' cols="25" rows="5"></textarea>
+        <br><br><input class='btn-submit' type="submit" value="Submit"><br>
+    </form>
+  </div>
+</div>
+<div class='dish-list-wrapper'>
+   {%for user in users %}
+    <h4>UserName: {{ user.name }}</h4>
+    
+    <form id='submit_draw' action="/admin/addDish" method="post" enctype="multipart/form-data">
+    <input class='delete-btn' type="submit" value="Delete User"></form>
+    <hr>
+    {%- endfor %} 
+</div>   
+<script src="js/admin.js"></script>
+
+

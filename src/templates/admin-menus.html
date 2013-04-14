@@ -1,0 +1,40 @@
+<div class='reservations-wrapper'>
+   <form id='submit_draw' action="/admin/menus" method="post" enctype="multipart/form-data" class="shadowed">
+        <input type="text" name="name" placeholder='Name' > <br>
+        <input type="text" name="price"  placeholder='Price'><br>
+        <textarea name="description" placeholder='Description' cols="25" rows="5" style="margin-left:25px;"></textarea>
+        <br><br><input class='btn-submit' type="submit" value="Submit"><br>
+        <p style="margin-left:25px;">1º Dish:</p>
+        <select name="dish1"style="margin-left:25px;">
+          {%for dish in dishes %}
+          <option value="{{dish._id}}">{{dish.name}}</option>
+          {%- endfor %} 
+        </select><br><br>
+        <p style="margin-left:25px;">2º Dish:</p>
+        <select style="margin-left:25px;" name="dish2">
+           {%for dish in dishes %}
+          <option value="{{dish._id}}">{{dish.name}}</option>
+          {%- endfor %} 
+        </select><br><br>
+        <p style="margin-left:25px;" >3º Dish:</p>
+        <select style="margin-left:25px;" name="dish3">
+           {%for dish in dishes %}
+          <option value="{{dish._id}}">{{dish.name}}</option>
+          {%- endfor %} 
+        </select><br><br>
+    </form>
+</div>
+
+<div class='dish-list-wrapper'>
+  <div class="shadowed">
+     {%for menu in menus %}
+         <div>
+          <h4>Dish Name: {{ menu.name }}</h4>
+          <input id="{{menu._id}}" class='delete-btn' type="submit" value="Delete Menu."></form>
+          <hr>
+        </div>
+      {%- endfor %} 
+  </div>   
+</div>
+<script src="js/admin-menu.js"></script>
+

@@ -1,0 +1,29 @@
+<div class="dishes-wrapper shadowed" style="margin-top:20px;" >
+
+    <div class="dishes-image-wrapper" > 
+        <a href="#"><img  src="/src/imagesages/food/daymenu.jpg"    alt="Daymenu"     class='draw-img'></a>
+    </div>
+    <div>
+	    <div class="dishes-text-wrapper"> 
+	    		<h1>Day menus.</h1>
+	    		{% if menus %}
+		        	{% for menu in menus -%}
+						<div>
+							<h3>{{ menu.name }}</h3>  
+							<ol> 
+								{% for dish in menu.dishes -%}    
+								<li>
+									{{dish.name}}
+								</li>
+								{%- endfor %}
+							</ol>
+						</div>           
+					{%- endfor %}
+				{% else %}
+			    	<h4>There are no Menus right now.</h4>
+			 	{% endif %}
+	    </div>
+	</div>
+</div>
+
+

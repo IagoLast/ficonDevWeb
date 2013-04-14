@@ -1,0 +1,34 @@
+
+<div class='reservations-wrapper'>
+  <form id='submit_draw' class="shadowed" action="/admin/dishes" method="post" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder='Name' > <br>
+        <input type="text" name="price"  placeholder='Price'><br>                    
+        <input type="text" name="image"  placeholder='image'><br>
+        <select name="dishType" style="margin-left:25px;">
+          <option value="Meat">Meat</option>
+          <option value="Fish">Fish</option>
+          <option value="Dessert">Dessert</option>
+          <option value="Appetizer">Appetizer</option>
+        </select><br><br>
+        <textarea name="description" placeholder='Description' style="margin-left:25px;" cols="25" rows="5"></textarea>
+        <br><br><input class='btn-submit' type="submit" value="Submit"><br>
+    </form>
+</div>
+
+
+
+<div class='dish-list-wrapper'>
+  <div class="shadowed">
+     {%for dish in dishes %}
+     <div style=" border-bottom: 1px solid #666;">
+      <h4>Dish Name: {{ dish.name }} </h4>
+      <p> ID: {{dish._id}}</p>
+      <input id="{{dish._id}}" class='delete-btn' onClick="deleteDish()" type="submit" value="Delete dish." style="margin-bottom:10px;">
+    </div>
+      {%- endfor %} 
+  </div>   
+
+</div>
+<script src="js/admin.js"></script>
+
+
