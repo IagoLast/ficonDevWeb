@@ -1,4 +1,4 @@
-from src import database
+import database
 
 """
  Dish Operations

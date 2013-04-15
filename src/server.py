@@ -6,7 +6,7 @@ from flask import render_template
 import database
 import apis
 from auth import requires_auth
-from src import facade
+import facade
 
 
 app = Flask(__name__)

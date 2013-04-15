@@ -2,7 +2,7 @@ from functools import wraps
 from flask import request, Response
 from werkzeug.security import check_password_hash
 
-from src.database import find_user
+from database import find_user
 
 def check_auth(username, password):
     """This function is called to check if a username /
