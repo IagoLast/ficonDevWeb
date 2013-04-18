@@ -9,7 +9,8 @@ In order to execute the project you need the following software and libraries:
         - MongoDB (v 2.4.1)
         - pip
 
-You can install pip by executing: "sudo apt-get install python-pip"
+You can install pip by executing::
+    sudo apt-get install python-pip
 
 Note that we use Responsive Design for all the views.
 
