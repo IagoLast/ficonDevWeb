@@ -1,6 +1,7 @@
-Instructions to execute the project:
+Installation
+------------
 
-In order to execute the project you need the following software and libraries:
+In order to execute the application you need the following software and libraries:
 
     Requirements:
         - Python 2.7
@@ -9,17 +10,25 @@ In order to execute the project you need the following software and libraries:
         - MongoDB (v 2.4.1)
         - pip
 
-You can install pip by executing::
+You can install pip with: ::
+
     sudo apt-get install python-pip
 
-Note that we use Responsive Design for all the views.
+Once you have pip you can install Pymongo and Flask by executing the next command in doc folder: ::
+    
+    sudo pip install -r requirements.txt 
 
-Once you have pip you can install Pymongo and Flask by executing:"sudo pip install -r requirements.txt" in doc folder.
 
 You can initiate the DB with some test data by executing the script in sql folder.
 
-In order to run the server run: "python server.py" in src folder, and you're ready to go.
-The applications runs in port 9001.
+To run the server just execute the next command in src folder: ::
+
+    python server.py
+
+
+And you're ready to go.
+
+The application runs in port 9001.
 
 You have the Admin site in localhost:9001/admin.html and the main site in localhost:9001/index.html
 
